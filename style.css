@@ -31,6 +31,10 @@ body {
     padding-left: 10px;
 }
 
+.p-l-20 {
+    padding-left: 20px;
+}
+
 .text-uppercase {
     text-transform: uppercase;
 }
@@ -49,8 +53,12 @@ body {
 
 #wrapper {
     background-color: black;
-    height: calc(100vh - 100px);
+    /* !calc(100vh - 100px) non mi permette scroll */
+    /* height: calc(100vh - 100px); */
     width: 100%;
+    /* !padding-bottom  e height:100vh si */
+    height: 100vh;
+    padding-bottom: 100px;
 }
 
 aside {
@@ -61,6 +69,14 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+aside .first-menu {
+    width: 100%;
+}
+
+aside ul.shl li:hover {
+    border-left: 5px solid green;
 }
 
 aside ul {
@@ -96,25 +112,62 @@ footer {
 
 
 
-
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 500px) {
 
     aside span,
     aside .recent,
-    aside ul>li>a {
+    aside ul>li>span {
         display: none;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .p-l-20 {
+        padding-left: 0;
     }
 
     aside {
         align-items: center;
         text-align: center;
+        width: 25%;
+    }
+
+    main {
+        width: 75%;
+    }
+}
+
+@media all and (min-width: 501px) and (max-width: 767px) {
+
+    aside span,
+    aside .recent,
+    aside ul>li>span {
+        display: none;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .p-l-20 {
+        padding-left: 0;
+    }
+
+    aside {
+        align-items: center;
+        text-align: center;
+        width: 15%;
+    }
+
+    main {
+        width: 85%;
     }
 }
 
 
 @media screen and (max-width: 992px) {
-
     aside .recent {
         font-size: 15px;
     }
