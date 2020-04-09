@@ -63,6 +63,15 @@ aside {
     justify-content: space-between;
 }
 
+aside ul {
+    list-style: none;
+}
+
+aside ul a {
+    text-decoration: none;
+    color: white;
+}
+
 main {
     float: left;
     background-color: lightgreen;
@@ -92,7 +101,8 @@ footer {
 @media screen and (max-width: 767px) {
 
     aside span,
-    aside .recent {
+    aside .recent,
+    aside ul>li>a {
         display: none;
     }
 
