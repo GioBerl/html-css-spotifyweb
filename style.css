@@ -113,7 +113,6 @@ main .container {
     width: 80%;
     margin: auto;
     height: calc(100vh - 100px);
-    border: 1px solid red;
 }
 
 main .container ul {
@@ -124,19 +123,21 @@ main .container ul {
     height: 15%;
     width: 100%;
     margin: auto;
-    border: 1px solid black;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 main li {
-    /* border: 1px solid fuchsia; */
     padding: 15px;
+}
+
+main li a {
+    color: white;
+    text-decoration: none;
 }
 
 main .hamburger {
     display: none;
-    font-size: 50px;
-    border: 1px solid magenta;
+    font-size: 40px;
 }
 
 main .img-responsive {
@@ -148,7 +149,12 @@ main .img-circle {
     border-radius: 100%;
 }
 
-main .for-u {
+main .img-deck {
+    border-radius: 5%;
+}
+
+main .for-u,
+main .recent {
     display: flex;
     flex-wrap: wrap;
 }
@@ -156,7 +162,6 @@ main .for-u {
 main .card {
     text-align: center;
     width: 20%;
-    border: 1px solid red;
     padding: 20px;
 }
 
@@ -175,7 +180,7 @@ footer {
 
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767px) {
 
     aside span,
     aside .recent,
@@ -194,54 +199,92 @@ footer {
     aside {
         align-items: center;
         text-align: center;
-        width: 25%;
+        width: 23%;
     }
 
     main {
-        width: 75%;
+        width: 77%;
     }
-}
 
-@media all and (min-width: 501px) and (max-width: 767px) {
-
-    aside span,
-    aside .recent,
-    aside ul>li>span {
+    main .container ul {
         display: none;
-    }
-
-    .logo {
-        justify-content: center;
-    }
-
-    .p-l-20 {
-        padding-left: 0;
-    }
-
-    aside {
-        align-items: center;
-        text-align: center;
-        width: 15%;
-    }
-
-    main {
-        width: 85%;
-    }
-}
-
-
-@media screen and (max-width: 992px) {
-    aside .recent {
-        font-size: 15px;
     }
 
     main .hamburger {
         display: block;
         text-align: right;
         margin-top: 10px;
+        position: fixed;
+        width: 65%;
+        margin: auto;
+    }
+
+    main .create {
+        padding-top: 60px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    main .card {
+        width: 50%;
+    }
+}
+
+/* TABLET */
+@media all and (min-width: 768px) and (max-width: 991px) {
+
+    aside {
+        width: 25%;
+    }
+
+    aside .recent {
+        font-size: 15px;
+    }
+
+    aside .recent p {
+        padding-bottom: 20px;
+    }
+
+    main {
+        width: 75%;
     }
 
     main .container ul {
         display: none;
+    }
+
+    main .hamburger {
+        display: block;
+        text-align: right;
+        margin-top: 10px;
+        position: fixed;
+        width: 65%;
+        margin: auto;
+    }
+
+    main .create {
+        padding-top: 60px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    main .card {
+        width: 25%;
+    }
+}
+
+
+
+@media screen and (min-width: 1287px) {
+    aside {
+        width: 20%;
+    }
+
+    main {
+        width: 80%;
     }
 }
