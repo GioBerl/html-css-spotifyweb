@@ -168,13 +168,146 @@ main .card {
 
 /* -------- */
 
+
+/* FOOTER */
+
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 100px;
     background-color: lightseagreen;
+    display: flex;
+    justify-content: space-between;
 }
+
+.footer-left {
+    width: 20%;
+    background-color: magenta;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-left .img-container {
+    height: 90%;
+    padding: 10px;
+}
+
+.footer-left .img-container img {
+    height: 100%;
+}
+
+.footer-left span {
+    font-size: small;
+}
+
+/* footer center */
+
+.footer-center {
+    width: 50%;
+    background-color: rebeccapurple;
+}
+
+.footer-center-top {
+    display: flex;
+    height: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-center-bottom {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timer-now,
+.timer-total {
+    width: 15%;
+}
+
+.timer-total {
+    text-align: right;
+}
+
+.slide-container {
+    width: 70%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1px;
+    vertical-align: middle;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+/* footer right */
+
+.footer-right {
+    width: 20%;
+    background-color: teal;
+}
+
+.footer-right-top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+}
+
+.footer-right-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.slide-volume {
+    width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -230,6 +363,23 @@ footer {
     main .card {
         width: 50%;
     }
+
+    footer .hidden-md {
+        display: none;
+    }
+
+    .footer-left .img-container {
+        height: 70%;
+    }
+
+    .timer-now,
+    .timer-total {
+        font-size: smaller;
+    }
+
+    .slide-container {
+        width: 50%;
+    }
 }
 
 /* TABLET */
@@ -274,6 +424,14 @@ footer {
 
     main .card {
         width: 25%;
+    }
+
+    footer .hidden-md {
+        display: none;
+    }
+
+    .footer-left .img-container {
+        height: 80%;
     }
 }
 
