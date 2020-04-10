@@ -97,6 +97,12 @@ aside .user {
     font-size: 30px;
 }
 
+hr {
+    width: 90%;
+    margin: auto;
+    background-color: teal;
+}
+
 /* ----------- */
 
 
@@ -272,11 +278,12 @@ footer {
 .footer-right {
     width: 20%;
     background-color: teal;
+    padding: 0 20px;
 }
 
 .footer-right-top {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 50px;
 }
@@ -290,6 +297,7 @@ footer {
 
 .slide-volume {
     width: 70%;
+    vertical-align: middle;
 }
 
 
@@ -368,6 +376,15 @@ footer {
         display: none;
     }
 
+    .footer-left,
+    .footer-center {
+        flex-grow: 1;
+    }
+
+    .footer-center-bottom {
+        justify-content: space-evenly;
+    }
+
     .footer-left .img-container {
         height: 70%;
     }
@@ -379,6 +396,10 @@ footer {
 
     .slide-container {
         width: 50%;
+    }
+
+    .hidden-sm {
+        display: none;
     }
 }
 
