@@ -6,7 +6,8 @@
 
 body {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .clearfix {
@@ -43,6 +44,10 @@ body {
     font-weight: bold;
 }
 
+.text-big {
+    font-size: 35px;
+}
+
 .small {
     font-size: small;
 }
@@ -52,7 +57,8 @@ body {
 }
 
 #wrapper {
-    background-color: black;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(87deg, rgba(2, 0, 36, 1) 0%, rgba(50, 159, 81, 1) 100%, rgba(0, 212, 255, 1) 100%);
     /* !calc(100vh - 100px) non mi permette scroll */
     height: calc(100vh - 100px);
     width: 100%;
@@ -65,12 +71,16 @@ body {
 /* ASIDE */
 aside {
     float: left;
-    background-color: brown;
     height: calc(100vh - 100px);
     width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+aside .spotty {
+    color: #1DD15D;
 }
 
 aside .first-menu {
@@ -97,9 +107,13 @@ aside .user {
     font-size: 30px;
 }
 
+aside .recent p {
+    padding-bottom: 25px;
+}
+
 hr {
-    width: 90%;
-    margin: auto;
+    width: 80%;
+    margin-left: 10px;
     background-color: teal;
 }
 
@@ -109,7 +123,6 @@ hr {
 /* MAIN */
 main {
     float: left;
-    background-color: lightgreen;
     height: calc(100vh - 100px);
     width: 75%;
     overflow: auto;
@@ -130,6 +143,10 @@ main .container ul {
     width: 100%;
     margin: auto;
     font-size: 14px;
+}
+
+main .container ul li:hover {
+    border-bottom: 1px solid white;
 }
 
 main li {
@@ -169,6 +186,12 @@ main .card {
     text-align: center;
     width: 20%;
     padding: 20px;
+    cursor: pointer;
+}
+
+main .card:hover {
+    background-color: rgba(81, 107, 81, 0.795);
+    border-radius: 10px;
 }
 
 
@@ -182,14 +205,14 @@ footer {
     bottom: 0;
     width: 100%;
     height: 100px;
-    background-color: lightseagreen;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(87deg, rgba(2, 0, 36, 1) 0%, rgba(50, 159, 81, 1) 100%, rgba(0, 212, 255, 1) 100%);
     display: flex;
     justify-content: space-between;
 }
 
 .footer-left {
     width: 20%;
-    background-color: magenta;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -208,11 +231,14 @@ footer {
     font-size: small;
 }
 
+.footer-left .heart:hover {
+    color: red;
+}
+
 /* footer center */
 
 .footer-center {
     width: 50%;
-    background-color: rebeccapurple;
 }
 
 .footer-center-top {
@@ -258,10 +284,10 @@ footer {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background: #4CAF50;
+    background: rgb(35, 31, 75);
     cursor: pointer;
 }
 
@@ -277,7 +303,6 @@ footer {
 
 .footer-right {
     width: 20%;
-    background-color: teal;
     padding: 0 20px;
 }
 
@@ -362,6 +387,10 @@ footer {
 
     main .create {
         padding-top: 60px;
+    }
+
+    main .text-big {
+        font-size: 22px;
     }
 
     .container {
