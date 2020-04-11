@@ -16,6 +16,18 @@ body {
     clear: both;
 }
 
+.pointer:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    color: rgba(255, 255, 255, 0.63);
+}
+
+.pointer-big:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    color: rgba(255, 255, 255, 0.63);
+}
+
 .text-center {
     text-align: center;
 }
@@ -34,6 +46,14 @@ body {
 
 .p-l-20 {
     padding-left: 20px;
+}
+
+.p-t-30 {
+    padding-top: 30px;
+}
+
+.p-b-section {
+    padding-bottom: 50%;
 }
 
 .text-uppercase {
@@ -112,9 +132,9 @@ aside .recent p {
 }
 
 hr {
-    width: 80%;
-    margin-left: 10px;
-    background-color: teal;
+    width: 90%;
+    margin: auto;
+    display: none;
 }
 
 /* ----------- */
@@ -147,6 +167,7 @@ main .container ul {
 
 main .container ul li:hover {
     border-bottom: 1px solid white;
+    transform: scale(1.1);
 }
 
 main li {
@@ -177,7 +198,10 @@ main .img-deck {
 }
 
 main .for-u,
-main .recent {
+main .recent,
+main .classific,
+main .genre,
+main .discover {
     display: flex;
     flex-wrap: wrap;
 }
@@ -189,9 +213,27 @@ main .card {
     cursor: pointer;
 }
 
+main .card img {
+    position: relative;
+}
+
+main .play-hover {
+    color: white;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
 main .card:hover {
     background-color: rgba(81, 107, 81, 0.795);
     border-radius: 10px;
+    transform: scale(1.05);
+}
+
+main .card:hover .play-hover {
+    opacity: 1;
 }
 
 
@@ -225,6 +267,7 @@ footer {
 
 .footer-left .img-container img {
     height: 100%;
+    border-radius: 10%;
 }
 
 .footer-left span {
@@ -366,6 +409,10 @@ footer {
         align-items: center;
         text-align: center;
         width: 23%;
+    }
+
+    aside hr {
+        display: block;
     }
 
     main {
