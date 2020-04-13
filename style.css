@@ -92,7 +92,7 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-right: 1px solid rgba(0, 0, 0, 0.274);
+    /* border-right: 1px solid rgba(0, 0, 0, 0.274); */
 }
 
 aside .spotty {
@@ -403,7 +403,7 @@ footer {
         text-align: right;
         margin-top: 10px;
         position: fixed;
-        width: 65%;
+        width: 68%;
         margin: auto;
     }
 
