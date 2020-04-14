@@ -10,7 +10,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.clearfix {
+.clearfix::after {
     content: "";
     display: table;
     clear: both;
@@ -87,12 +87,11 @@ body {
 /* ASIDE */
 aside {
     float: left;
-    height: calc(100vh - 100px);
     width: 25%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* border-right: 1px solid rgba(0, 0, 0, 0.274); */
 }
 
 aside .spotty {
@@ -139,15 +138,15 @@ hr {
 /* MAIN */
 main {
     float: left;
-    height: calc(100vh - 100px);
+    height: 100%;
     width: 75%;
     overflow: auto;
 }
 
 main .container {
     width: 80%;
+    height: 100%;
     margin: auto;
-    height: calc(100vh - 100px);
 }
 
 main .container ul {
@@ -236,9 +235,6 @@ main .card:hover .play-hover {
 
 /* FOOTER */
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     height: 100px;
     background: rgb(2, 0, 36);
     background: linear-gradient(87deg, rgba(2, 0, 36, 1) 0%, rgba(50, 159, 81, 1) 100%, rgba(0, 212, 255, 1) 100%);
@@ -257,6 +253,9 @@ footer {
 
 .footer-left .img-container {
     height: 90%;
+    /* per firefox */
+    width: 85px;
+    /* ----------- */
     padding: 10px;
 }
 
