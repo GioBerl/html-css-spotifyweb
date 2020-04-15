@@ -7,7 +7,7 @@
 body {
     color: white;
     font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .clearfix::after {
@@ -78,11 +78,15 @@ body {
 
 #wrapper {
     background: rgb(2, 0, 36);
-    background: linear-gradient(87deg, rgba(2, 0, 36, 1) 0%, rgba(50, 159, 81, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(
+        87deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(50, 159, 81, 1) 100%,
+        rgba(0, 212, 255, 1) 100%
+    );
     height: calc(100vh - 100px);
     width: 100%;
 }
-
 
 /* ASIDE */
 aside {
@@ -95,7 +99,7 @@ aside {
 }
 
 aside .spotty {
-    color: #1DD15D;
+    color: #1dd15d;
 }
 
 aside .first-menu {
@@ -133,7 +137,6 @@ hr {
 }
 
 /* ----------- */
-
 
 /* MAIN */
 main {
@@ -237,11 +240,15 @@ main .card:hover .play-hover {
 footer {
     height: 100px;
     background: rgb(2, 0, 36);
-    background: linear-gradient(87deg, rgba(2, 0, 36, 1) 0%, rgba(50, 159, 81, 1) 100%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(
+        87deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(50, 159, 81, 1) 100%,
+        rgba(0, 212, 255, 1) 100%
+    );
     display: flex;
     justify-content: space-between;
 }
-
 
 /* footer left */
 .footer-left {
@@ -313,8 +320,8 @@ footer {
     background: #d3d3d3;
     outline: none;
     opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
 }
 
 .slider::-webkit-slider-thumb {
@@ -360,14 +367,11 @@ footer {
     vertical-align: middle;
 }
 
-
-
 /* MEDIA QUERIES */
 @media screen and (max-width: 767px) {
-
     aside span,
     aside .recent,
-    aside ul>li>span {
+    aside ul > li > span {
         display: none;
     }
 
@@ -455,7 +459,6 @@ footer {
 
 /* TABLET */
 @media all and (min-width: 768px) and (max-width: 991px) {
-
     aside {
         width: 25%;
     }
